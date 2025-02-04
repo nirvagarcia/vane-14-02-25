@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import './Overlay.css';
 import ubi from './assets/ubi.png'; 
 
 const Overlay = ({ onClose }) => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true);
+  }, []);
+
+  const handleClose = () => {
+    setVisible(false);
+    setTimeout(onClose, 500); // Espera a que la transición termine
+  };
+
   return (
-    <div className="overlay">    
+    <div className={`overlay ${visible ? 'show' : 'hide'}`}>    
       <div className="modal">
         <div className="modal-content">
-            <div className="modal-close-button">
-                <IconButton className="close-button" onClick={onClose}>
-                    <CloseIcon/>
-                </IconButton>
-            </div>
+          <div className="modal-close-button">
+            <IconButton className="close-button" onClick={handleClose}>
+              <CloseIcon/>
+            </IconButton>
+          </div>
           <h2>Te tocó, señorita Villalobos</h2>
           <p>
             Hoy nos dirigiremos a{' '}
@@ -28,8 +39,6 @@ const Overlay = ({ onClose }) => {
           <img src={ubi} alt="Ubicación" className="location-image" />
           <p><strong>Hora:</strong> 4:30pm</p>
           <p>Ponte bonita (aunque siempre lo estás), que tu taxi llega a las <strong>4:00pm</strong></p>
-          <p className="boba-text">Espero te guste, bonita</p>
-
         </div>
       </div>
     </div>

@@ -34,7 +34,7 @@ function App() {
       </div>
       <header className="App-header">
         <p>
-          ¿Me darías el honor de ser su San Valentin (adelantado)?
+          ¿Me darías el honor de ser tu San Valentin (adelantado)?
         </p>
         <div className={`button-container ${noButtonClickCount >= 3 ? 'center-yes-btn' : ''}`}>
           <button className={`btn yes-btn ${noButtonClickCount >= 3 ? 'enlarge' : ''}`} onClick={handleYesClick}>Sí</button>

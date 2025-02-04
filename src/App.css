@@ -116,18 +116,18 @@
 .doggo {
   width: 150px;
   position: absolute;
-  bottom: -150px;
-  animation: slideUpCenter 0.5s forwards;
+  top: -150px;
+  animation: slideDownCenter 0.5s forwards;
 }
 
-@keyframes slideUpCenter {
+@keyframes slideDownCenter {
   0% {
-    bottom: -150px;
+    top: -150px;
     left: 50%;
     transform: translateX(-50%);
   }
   100% {
-    bottom: 50px;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -146,7 +146,7 @@
     top: -100px;
   }
   100% {
-    top: 20px;
+    top: 100px;
   }
 }
 
