@@ -36,9 +36,10 @@ const Overlay = ({ onClose }) => {
               Parque María Reiche, Miraflores
             </a>
           </p>
-          <img src={ubi} alt="Ubicación" className="location-image" />
+          <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTh0OHc5YTV5YjNxMGxyeXM5aWc0cHh0YXp6ZXNpNWdzbzFodHcydSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26gsqdEoqfgCY0e1a/giphy.gif" alt="Ubicación" className="location-image" />          
+          <p>Ponte bonita (aunque siempre lo estás), espero te guste esta date</p>
           <p><strong>Hora:</strong> 4:30pm</p>
-          <p>Ponte bonita (aunque siempre lo estás), que tu taxi llega a las <strong>4:00pm</strong></p>
+
         </div>
       </div>
     </div>
